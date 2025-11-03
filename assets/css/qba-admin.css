@@ -1,0 +1,457 @@
+/**
+ * Admin Styles for Quiz Battle Arena
+ *
+ * @package QuizBattleArena
+ * @since 1.0.0
+ */
+
+/* Admin Dashboard */
+.qba-admin-dashboard {
+    margin: 20px 0;
+}
+
+.qba-dashboard-header {
+    margin-bottom: 30px;
+}
+
+.qba-dashboard-header h1 {
+    margin: 0 0 10px 0;
+    color: #1d2327;
+}
+
+.qba-dashboard-header p {
+    color: #646970;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Stats Grid */
+.qba-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.qba-stat-card {
+    background: white;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.qba-stat-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.qba-stat-icon {
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.qba-stat-content {
+    flex: 1;
+}
+
+.qba-stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d2327;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.qba-stat-label {
+    color: #646970;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* Dashboard Sections */
+.qba-dashboard-actions,
+.qba-dashboard-recent-activity,
+.qba-dashboard-info {
+    margin-bottom: 30px;
+}
+
+.qba-dashboard-actions h2,
+.qba-dashboard-recent-activity h2,
+.qba-dashboard-info h3 {
+    margin: 0 0 20px 0;
+    color: #1d2327;
+    font-size: 18px;
+}
+
+.qba-action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.qba-action-buttons .button {
+    padding: 8px 16px;
+    height: auto;
+    line-height: 1.4;
+}
+
+/* Activity List */
+.qba-activity-list {
+    background: white;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.qba-activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.qba-activity-item:last-child {
+    border-bottom: none;
+}
+
+.qba-activity-icon {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.qba-activity-content {
+    flex: 1;
+}
+
+.qba-activity-text {
+    margin: 0 0 4px 0;
+    color: #1d2327;
+    font-weight: 500;
+}
+
+.qba-activity-time {
+    color: #646970;
+    font-size: 13px;
+}
+
+/* Info Boxes */
+.qba-info-box {
+    background: white;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.qba-info-box h3 {
+    margin: 0 0 16px 0;
+    color: #1d2327;
+    font-size: 16px;
+}
+
+.qba-info-box ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.qba-info-box li {
+    margin-bottom: 8px;
+    color: #646970;
+    line-height: 1.5;
+}
+
+.qba-info-box li:last-child {
+    margin-bottom: 0;
+}
+
+.qba-info-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.qba-info-box ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.qba-info-box ul li:last-child {
+    border-bottom: none;
+}
+
+.qba-info-box strong {
+    color: #1d2327;
+}
+
+/* Settings Page */
+.qba-settings-section {
+    margin-bottom: 40px;
+}
+
+.qba-settings-section h2 {
+    margin: 0 0 20px 0;
+    color: #1d2327;
+    font-size: 18px;
+    border-bottom: 1px solid #c3c4c7;
+    padding-bottom: 10px;
+}
+
+.qba-settings-section p {
+    color: #646970;
+    margin-bottom: 20px;
+}
+
+/* Form Tables */
+.form-table th {
+    padding: 20px 10px 20px 0;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.form-table td {
+    padding: 20px 10px 20px 0;
+}
+
+/* Input Fields */
+.qba-admin-input {
+    min-width: 300px;
+}
+
+.qba-admin-input[type="number"] {
+    max-width: 100px;
+}
+
+/* Description Text */
+.qba-admin-field .description {
+    color: #646970;
+    font-style: italic;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Checkbox Fields */
+.qba-admin-checkbox {
+    margin-right: 8px;
+}
+
+/* Leaderboard Tables */
+.qba-leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.qba-leaderboard-table th,
+.qba-leaderboard-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.qba-leaderboard-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #1d2327;
+    border-bottom: 2px solid #c3c4c7;
+}
+
+.qba-leaderboard-table tr:hover {
+    background: #f8f9fa;
+}
+
+.qba-leaderboard-table .qba-rank {
+    font-weight: 600;
+    color: #646970;
+    width: 60px;
+}
+
+.qba-leaderboard-table .qba-player {
+    font-weight: 500;
+}
+
+.qba-leaderboard-table .qba-rating {
+    font-weight: 600;
+    color: #007cba;
+}
+
+.qba-leaderboard-table .qba-wins {
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* Battle Tables */
+.qba-battles-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.qba-battles-table th,
+.qba-battles-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.qba-battles-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.qba-battles-table .qba-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.qba-status-active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.qba-status-completed {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.qba-status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.qba-status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Loading States */
+.qba-loading {
+    text-align: center;
+    padding: 40px;
+    color: #646970;
+}
+
+.qba-loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: qba-admin-spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes qba-admin-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+    .qba-stat-card:hover {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .qba-loading-spinner {
+        animation: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .qba-stat-card {
+        border: 2px solid #1d2327;
+    }
+
+    .qba-info-box {
+        border: 2px solid #c3c4c7;
+    }
+
+    .qba-leaderboard-table {
+        border: 2px solid #c3c4c7;
+    }
+
+    .qba-leaderboard-table th,
+    .qba-leaderboard-table td {
+        border: 1px solid #1d2327;
+    }
+}
+
+/* Error States */
+.qba-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 10px 0;
+}
+
+/* Success States */
+.qba-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    .qba-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qba-stat-card {
+        padding: 16px;
+    }
+
+    .qba-stat-number {
+        font-size: 24px;
+    }
+
+    .qba-action-buttons {
+        flex-direction: column;
+    }
+
+    .qba-action-buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .qba-activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .form-table th {
+        padding-bottom: 0;
+    }
+}

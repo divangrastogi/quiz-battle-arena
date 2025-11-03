@@ -1,0 +1,354 @@
+/**
+ * Public Styles for Quiz Battle Arena
+ *
+ * @package QuizBattleArena
+ * @since 1.0.0
+ */
+
+/* Battle Section */
+.qba-battle-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+/* Battle Buttons */
+.qba-battle-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.qba-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.qba-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.qba-btn:active {
+    transform: translateY(0);
+}
+
+.qba-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.qba-btn-primary {
+    background: linear-gradient(135deg, #007cba 0%, #005a87 100%);
+    color: white;
+}
+
+.qba-btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #005a87 0%, #004065 100%);
+}
+
+.qba-btn-secondary {
+    background: #f8f9fa;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.qba-btn-secondary:hover:not(:disabled) {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.qba-btn-icon {
+    font-size: 1.2em;
+}
+
+/* User Stats */
+.qba-user-stats {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.qba-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.qba-stat-label {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.qba-stat-value {
+    font-weight: 600;
+    color: #007cba;
+}
+
+/* Leaderboard Widget */
+.qba-leaderboard-widget {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.qba-leaderboard-widget h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+.qba-leaderboard-preview {
+    margin-bottom: 1rem;
+}
+
+.qba-leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.qba-leaderboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.qba-leaderboard-item:last-child {
+    border-bottom: none;
+}
+
+.qba-leaderboard-item.qba-current-user {
+    background: #e7f3ff;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    margin: 0 -0.5rem;
+}
+
+.qba-rank {
+    font-weight: 600;
+    color: #6c757d;
+    min-width: 2rem;
+}
+
+.qba-player-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.qba-player-score {
+    font-weight: 600;
+    color: #007cba;
+}
+
+.qba-view-full-leaderboard {
+    display: inline-block;
+    color: #007cba;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.qba-view-full-leaderboard:hover {
+    text-decoration: underline;
+}
+
+/* Loading States */
+.qba-loading {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+.qba-loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: qba-spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes qba-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .qba-btn:hover {
+        transform: none;
+    }
+
+    .qba-battle-option:hover {
+        transform: none;
+    }
+
+    .qba-answer-option:hover label {
+        transform: none;
+    }
+
+    .qba-loading-spinner {
+        animation: none;
+    }
+
+    @keyframes qba-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+/* Error States */
+.qba-error {
+    text-align: center;
+    padding: 2rem;
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
+
+.qba-no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Modal Overlay */
+.qba-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.qba-modal-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.qba-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.qba-modal-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qba-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.qba-modal-close:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.qba-modal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+/* Body modal open state */
+body.qba-modal-open {
+    overflow: hidden;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .qba-btn {
+        border: 2px solid;
+    }
+
+    .qba-answer-option label {
+        border-width: 2px;
+    }
+
+    .qba-modal-container {
+        border: 2px solid;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .qba-battle-buttons {
+        flex-direction: column;
+    }
+
+    .qba-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .qba-user-stats {
+        justify-content: center;
+    }
+
+    .qba-modal-container {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .qba-modal-header {
+        padding: 1rem;
+    }
+
+    .qba-modal-title {
+        font-size: 1.25rem;
+    }
+}
